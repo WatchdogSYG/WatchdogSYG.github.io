@@ -14,21 +14,22 @@
 </head>
 
 <body>
+	<img class="blob" src="assets/blob1.svg" id="blob1">
 
-<div id="div-header">
+	<div id="div-header">
 		<h1>Hello World</h1>
-		
+
 	</div>
 	<div class="div-searchbar">
 		<form action="https://www.google.com/search" class="search-form" method="get" name="google-search-form">
 			<div id="div-search-bar-logo-background"><img id="search-bar-logo-img" src="assets/logo-google.png"></div>
-			<input autocomplete="off" class="form-control" name="q" placeholder="Google Search"
-				required="required" type="text" autofocus>
+			<input autocomplete="off" class="form-control" name="q" placeholder="Google Search" required="required"
+				type="text" autofocus>
 			<button class="search-button" type="submit"><i class="material-icons">search</i></button>
 		</form>
 	</div>
 
-	
+
 
 	<div id="div-main">
 		<p>This header section should contain links to each of the main pages.<br>
@@ -36,15 +37,15 @@
 			unreal showcase, engineering toolkit, contact.</p>
 		<p><a href="home.html">Home</a></p>
 		<p><a href="work.html">Work</a></p>
-		<p>Unreal Portfolio</p>
-		<p>Socials, Links & Contact</p>
-		<p>Engineering Toolkit</p>
-		<p>Obsidian Publish</p>
-		<p>Minecraft Tournament</p>
-
-		<button class="glass-button">Glass Button</button>
-		<button class="page-link-button">Page Link Button</button>
-		<button class="glass-button page-link-button">Glass Page Link Button</button>
+		<div id="div-page-link-buttons">
+			<button type="button" class="glass-button page-link-button">Unreal Portfolio</button>
+			<button type="button" class="glass-button page-link-button">Socials, Links & Contact</button>
+			<button type="button" class="glass-button page-link-button">Engineering Toolkit</button>
+			<button type="button" class="glass-button page-link-button">Obsidian Publish</button>
+			<button type="button" class="glass-button page-link-button">Minecraft Tournament</button>
+			<button type="button" class="glass-button page-link-button">GitHub</button>
+			<button type="button" class="glass-button page-link-button">Placeholder</button>
+		</div>
 
 	</div>
 
@@ -54,4 +55,5 @@
 
 	</div>
 </body>
+
 </html>
