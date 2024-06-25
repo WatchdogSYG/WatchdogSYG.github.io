@@ -2,10 +2,19 @@
 
 :root {
 	--page-margin: 8em;
+
+	--color-discord: #5865F2;
+	--color-itchio: #fa5c5c;
+	--color-steam: #00adee;
+	--color-epic: #000000;
+
+	--btn-animation-time: 0.1s;
 }
 
-html,
-body {
+/* ------------------------------------------ */
+/* ---------------- BASE CSS ---------------- */
+/* ------------------------------------------ */
+html, body {
 	margin: 0;
 	min-height: 100vh;
 	min-width: 800px;
@@ -41,6 +50,24 @@ h1 {
 	-webkit-text-fill-color: transparent;
 }
 
+h2 {
+	font-weight: 700;
+	font-size: 30px;
+	text-align: left;
+	margin: 0em;
+
+	padding-top: 20px;
+
+	/*background: linear-gradient(225deg, #04fffe 14.89%, #2ac870 85.85%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;*/
+}
+
+/* ------------------------------------------ */
+/* ------------------ DIVS ------------------ */
+/* ------------------------------------------ */
+
 div {
 	display: inline-block;
 	height: fit-content;
@@ -66,13 +93,13 @@ div {
 }
 
 #div-footer {
-	margin: 0;
+	margin: 0px;
 	min-height: 100px;
 
 
 	padding: 50px 100px 50px 100px;
 	margin-top: auto;
-	background-color: #1e1124;
+	background-color: #111111;
 }
 
 #div-page-link-buttons {
@@ -81,6 +108,15 @@ div {
 	flex-wrap: wrap;
 }
 
+#div-social-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* ------------------------------------------ */
+/* ---------------- BUTTONS ----------------- */
+/* ------------------------------------------ */
 
 button {
 	border-radius: var(--main-radius);
@@ -95,12 +131,131 @@ button {
 	/* From https://css.glass */
 }
 
+.glass-button {
+	color: antiquewhite;
+	font-size: large;
+
+
+	text-align: center;
+	padding: 10px;
+
+	width: 150;
+	height: 150;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(50px);
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+.glass-button:hover {
+	background: rgba(255, 255, 255, 0.1);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+.page-link-button {
+	width: 150px;
+	height: 250px;
+}
+
+.social-button {
+	height: 120px;
+	width: 120px;
+	padding: 0px 35px 0px 35px;
+	margin: 0px 35px 0px 35px;
+	display: block;
+}
+
+/* -------- DISCORD */
+#discord-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#discord-btn:hover #discord-svg{
+	fill: var(--color-discord);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#discord-btn:hover {
+	border-color: var(--color-discord);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+/* -------- ITCHIO */
+#itchio-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#itchio-btn:hover #itchio-svg{
+	fill: var(--color-itchio);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#itchio-btn:hover {
+	border-color: var(--color-itchio);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+/* -------- STEAM */
+#steam-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#steam-btn:hover #steam-svg{
+	fill: var(--color-steam);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#steam-btn:hover {
+	border-color: var(--color-steam);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+/* -------- EPIC */
+#epic-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#epic-btn:hover #epic-svg{
+	fill: var(--color-epic);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#epic-btn:hover {
+	border-color: var(--color-epic);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+
+
+/* ------------------------------------------ */
+/* ------------------ SVG ------------------- */
+/* ------------------------------------------ */
+
 .svg-star {
 	background-color: red;
 	stroke-width: 10px;
 }
 
+.blob {
+	position: absolute;
 
+}
+
+#blob1 {
+	left: 550px;
+	top: 800px;
+}
+
+/* ------------------------------------------ */
+/* --------------- SEARCH BAR --------------- */
+/* ------------------------------------------ */
 
 #div-searchbar {
 	height: 50px;
@@ -199,12 +354,6 @@ button {
 	/*timing not working?*/
 }
 
-
-
-
-
-
-
 .search-button:hover .material-icons {
 	background: linear-gradient(225deg, #04fffe 14.89%, #2ac870 85.85%);
 	background-clip: text;
@@ -213,43 +362,4 @@ button {
 
 	transition: all 10s ease-in;
 	/*timing not working?*/
-}
-
-.glass-button {
-	color: antiquewhite;
-	font-size: large;
-
-
-	text-align: center;
-	padding: 10px;
-
-	width: 150;
-	height: 150;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(50px);
-	-webkit-backdrop-filter: blur(50px);
-	border: 3px solid rgba(255, 255, 255, 0.3);
-	transition: all 0.1s ease-in;
-}
-
-.glass-button:hover {
-	background: rgba(255, 255, 255, 0.1);
-	transition: all 0.1s ease-in;
-}
-
-.page-link-button {
-	width: 150px;
-	height: 250px;
-}
-
-.blob {
-	position: absolute;
-
-}
-
-#blob1 {
-	left: 550px;
-	top: 400px;
 }
