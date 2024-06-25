@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+:root {
+	--page-margin: 8em;
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100vh;
+	min-width: 800px;
+}
+
 body {
 	--main-radius: 10px;
 
@@ -9,35 +20,20 @@ body {
 	/*background-image: url("assets/firewatch-2k.jpeg");*/
 	background-color: #16161c;
 	background-position: center;
-
-	height: 100%;
-	margin: 0px;
-	padding: 100px;
-
 	/*   uncomment the line below to add gradient heighlight background */
 	/*background: linear-gradient(248.72deg, #545661 -36.29%, #16161c 50.47%);*/
-}
 
-div {
-	display: block;
-}
-
-#div-main {
 	display: flex;
 	flex-direction: column;
-	
-}
+	justify-content: flex-start;
 
-#div-page-link-buttons{
-	flex-direction: row;
-	align-self: center;
-	flex-wrap: wrap;
 }
 
 h1 {
 	font-weight: 700;
 	font-size: 120px;
 	text-align: center;
+	margin: 0em;
 
 	background: linear-gradient(225deg, #04fffe 14.89%, #2ac870 85.85%);
 	background-clip: text;
@@ -45,10 +41,46 @@ h1 {
 	-webkit-text-fill-color: transparent;
 }
 
-#div-footer {
-	background-color: dimgray;
-	min-height: 50px;
+div {
+	display: inline-block;
+	height: fit-content;
 }
+
+#div-background-container {
+	position: absolute;
+	z-index: -1;
+	min-height: 100vh;
+}
+
+#div-header {
+	padding: 100px 0 100px 0;
+
+	margin: 0 var(--page-margin) 0 var(--page-margin);
+}
+
+#div-main {
+
+	margin: 0 var(--page-margin) 0 var(--page-margin);
+	display: flex;
+	flex-direction: column;
+}
+
+#div-footer {
+	margin: 0;
+	min-height: 100px;
+
+
+	padding: 50px 100px 50px 100px;
+	margin-top: auto;
+	background-color: #1e1124;
+}
+
+#div-page-link-buttons {
+	flex-direction: row;
+	align-self: center;
+	flex-wrap: wrap;
+}
+
 
 button {
 	border-radius: var(--main-radius);
@@ -69,6 +101,92 @@ button {
 }
 
 
+
+#div-searchbar {
+	height: 50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	
+}
+
+.search-form {
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 35em;
+	position: relative;
+}
+
+#div-search-bar-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	--search-bar-height: 50px;
+
+	background-color: white;
+	height: var(--search-bar-height);
+	width: 100%;
+	
+	min-width: 243px;
+	margin: 0;
+	border-radius: var(--search-bar-height);
+	z-index: -1;
+}
+
+#div-search-bar-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	
+	display: flex;
+	flex-direction: row;
+}
+
+#div-search-bar-logo {
+	align-content: center;
+	justify-items: center;
+	left: 0;
+	height: 100%;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+#search-bar-logo-img {
+	width: 34px;
+}
+
+.form-control {
+	display: flex;
+
+	height: 100%;
+	border: none;
+	background: rgba(0, 0, 0, 0);
+	font-family: Poppins, Roboto, Verdana, Arial, Helvetica, sans-serif;
+	padding: 0px;
+	flex-grow: 1;
+}
+
+.form-control:focus-visible {
+	outline: none;
+}
+
+.search-button {
+
+	background: white;
+	border-radius: 0px 25px 25px 0px;
+	padding: 12px 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 50px;
+	border: none;
+}
+
 .material-icons {
 	/*color: red;*/
 	background: black;
@@ -81,57 +199,11 @@ button {
 	/*timing not working?*/
 }
 
-.div-searchbar {
-	height: 50px;
-}
 
-.search-form {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-}
 
-.form-control:focus-visible {
-	outline: none;
-}
 
-#div-search-bar-logo-background {
-	height: 100%;
-	width: 50px;
-	background: white;
-	align-items: center;
-	justify-content: center;
-	display: flex;
 
-	border-radius: 25px 0px 0px 25px;
-}
 
-#search-bar-logo-img {
-	width: 34px;
-}
-
-.form-control {
-	display: flex;
-	height: 100%;
-	width: 500px;
-	border: none;
-	background: white;
-	font-family: Poppins, Roboto, Verdana, Arial, Helvetica, sans-serif;
-	padding: 0px;
-}
-
-.search-button {
-	background: white;
-	border-radius: 0px 25px 25px 0px;
-	padding: 12px 16px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	width: 50px;
-	border: none;
-}
 
 .search-button:hover .material-icons {
 	background: linear-gradient(225deg, #04fffe 14.89%, #2ac870 85.85%);
@@ -162,19 +234,19 @@ button {
 	transition: all 0.1s ease-in;
 }
 
-.glass-button:hover{
+.glass-button:hover {
 	background: rgba(255, 255, 255, 0.1);
 	transition: all 0.1s ease-in;
 }
 
 .page-link-button {
 	width: 150px;
-	height: 150px;
+	height: 250px;
 }
 
 .blob {
 	position: absolute;
-	z-index: -1;
+
 }
 
 #blob1 {
