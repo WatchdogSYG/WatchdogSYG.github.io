@@ -1,0 +1,38 @@
+/* ------------------------------------------ */
+/* ---------------- PARALLAX ---------------- */
+/* ------------------------------------------ */
+
+/* https://blog.logrocket.com/create-parallax-scrolling-css/ */
+.par-container {
+	background-attachment: fixed;
+	
+	background-position: center;
+	background-size: cover;
+
+	min-height: 50vh;
+}
+
+#par1{
+	background-image: url(assets/backgrounds/balty-ship.png);
+}
+
+#par2{
+	background-image: url(assets/backgrounds/promise-land-day.png);
+}
+
+#par3{
+	background-image: url(assets/backgrounds/vip-lounge.png);
+}
+
+#par4{
+	background-image: url(assets/backgrounds/quz-room.png);
+}
+
+#par5{
+	background-image: url(assets/backgrounds/kitchen.png);
+}
+
+.par-buffer {
+	height: 50vh;
+	background: var(--color-bg);
+}

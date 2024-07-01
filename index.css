@@ -1,0 +1,100 @@
+#div-page-link-buttons {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#div-social-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+
+
+/* ------------------------------------------ */
+/* ------------------ SVG ------------------- */
+/* ------------------------------------------ */
+
+.svg-star {
+	background-color: red;
+	stroke-width: 10px;
+}
+
+.blob {
+	position: absolute;
+
+}
+
+#blob1 {
+	left: 550px;
+	top: 800px;
+}
+
+/* -------- DISCORD */
+#discord-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#discord-btn:hover #discord-svg{
+	fill: var(--color-discord);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#discord-btn:hover {
+	border-color: var(--color-discord);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+/* -------- ITCHIO */
+#itchio-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#itchio-btn:hover #itchio-svg{
+	fill: var(--color-itchio);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#itchio-btn:hover {
+	border-color: var(--color-itchio);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+/* -------- STEAM */
+#steam-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#steam-btn:hover #steam-svg{
+	fill: var(--color-steam);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#steam-btn:hover {
+	border-color: var(--color-steam);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+/* -------- EPIC */
+#epic-svg {
+	fill: white;
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#epic-btn:hover #epic-svg{
+	fill: var(--color-epic);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
+#epic-btn:hover {
+	border-color: var(--color-epic);
+	transition: all var(--btn-animation-time) ease-in;
+}
+
