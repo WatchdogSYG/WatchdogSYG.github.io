@@ -36,3 +36,17 @@
 	height: 50vh;
 	background: var(--color-bg);
 }
+
+#div-registration-form{
+	display: flex;
+	flex-direction: row;
+}
+
+.div-form-container{
+	display: flex;
+	flex-direction: column;
+}
+
+#history{
+	height: fit-content;
+}
