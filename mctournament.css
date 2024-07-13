@@ -5,10 +5,8 @@
 /* https://blog.logrocket.com/create-parallax-scrolling-css/ */
 .par-container {
 	background-attachment: fixed;
-	
 	background-position: center;
 	background-size: cover;
-
 	min-height: 50vh;
 }
 
@@ -33,7 +31,8 @@
 }
 
 .par-buffer {
-	height: 50vh;
+	min-height: 50vh;
+	height: fit-content;
 	background: var(--color-bg);
 }
 
@@ -49,4 +48,14 @@
 
 #history{
 	height: fit-content;
+}
+
+#eg{
+	width: 500px;
+	height: 300px;
+	border: none;
+	border-radius: 10px;
+	background-image: url(assets/backgrounds/promise-land-morning.png);
+	background-size:cover;
+	background-color: #00000000;
 }

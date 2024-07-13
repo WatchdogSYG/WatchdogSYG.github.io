@@ -1,40 +1,101 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-	<link rel="stylesheet" href="style.css" />
-	<script src="stars.js"></script>
-	<script>
-		window.onload = function () {
-			limeFill();
-			document.write("Hello World js");
-		}
-	</script>
-</head>
-<body id="body-home">
 
-	<div id="div-header">
-		<h1>Home</h1>
+<head>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="google-search-bar.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<title>Home Page</title>
+</head>
+
+<body>
+
+	<div id="div-background-container">
+		<img class="blob" src="assets/blob1.svg" id="blob1">
 	</div>
 
+	<div id="div-header">
+		<h1>Hello World</h1>
+
+	</div>
 	<div id="div-main">
 
-		<button class="glass">YouTube</button>
+		<div id="div-searchbar" style="margin-bottom: 50px;">
+			<form id="search-form" action="https://www.google.com/search" method="get" name="google-search-form">
+				<div id="div-search-bar-background"></div>
+				<div id="div-search-bar-content">
+					<div id="div-search-bar-logo"><img id="search-bar-logo-img" src="assets/logo-google.png"></div>
+					<input id="form-control" autocomplete="off" name="q" placeholder="Google Search" required="required"
+						type="text" autofocus>
+					<button id="search-button" type="submit"><i class="material-icons">search</i></button>
+				</div>
+			</form>
+		</div>
 
-		<p><a href="index.html">Index</a></p>
-		<p><a href="work.html">Work</a></p>
+		<div class="div-content-centre">
+			<h2>Quick Links</h2>
+			<div class="div-flex-cards">
+				<a class="glass-button" href="home.html">Artstation</a>
+				<a class="glass-button" href="home.html">Artstation</a>
+				<a class="glass-button" href="home.html">Artstation</a>
+				<a class="glass-button" href="home.html">Artstation</a>
+				<a class="glass-button" href="home.html">Artstation</a>
+			</div>
+			<h2>Favourites</h2>
+		</div>
 
-		<object class="svg-star" data="assets/star.svg"></object>
-		<img src="assets/star.svg" />
+		<div class=" div-content-centre">
+			<p>This header section should contain links to each of the main pages.<br>
+				I want cards to morph into tabs upon click, the show content about either home shortcuts, game
+				development,
+				unreal showcase, engineering toolkit, contact.<br><br>For now, I've put pretty buttons. The epic games
+				store
+				logo is not square-ish and is causing some problems.... I've accidentally fixed it by removing the
+				vertical
+				padding.</p>
+		</div>
 
+		<div class="div-flex-cards  div-content-centre">
+			<div class="card-small">
+				<h4>Minecraft Tournament</h4>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore
+				magna aliqua. Ut enim ad minim veniam, quis...
+				<a class="button-main" href="mctournament.html">-></a>
+			</div>
+			<div class="card-small">
+				<h4>Minecraft Tournament</h4>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore
+				magna aliqua. Ut enim ad minim veniam, quis...
+				<a class="button-main" href="mctournament.html">-></a>
+			</div>
+			<div class="card-small">
+				<h4>Minecraft Tournament</h4>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore
+				magna aliqua. Ut enim ad minim veniam, quis...
+				<a class="button-main" href="mctournament.html">-></a>
+			</div>
+		</div>
 
 	</div>
 
 	<div id="div-footer">
-		<a href="about.html">About & Licences</a>
+		<a href="about.html">Legal</a>
+		<p>Site Sections</p>
+		<p>Links + Terms</p>
+		<p>About</p>
+		<p>Copyright</p>
 	</div>
-	</script>
+
+	</div>
 </body>
-<html
+
+</html>
